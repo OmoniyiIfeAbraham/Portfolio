@@ -31,3 +31,7 @@ app.use(express.static('public'))
 
 app.use('/', indexRouter)
 app.use('/admin', adminRouter)
+
+app.use(function(req, res) {
+    res.status(404).render('404')
+})

@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
             message: req.body.message,
         })
         await message.save()
-        res.send("Submitted")
+        res.redirect('/')
     } catch (err) {
         console.log(err)
     }
