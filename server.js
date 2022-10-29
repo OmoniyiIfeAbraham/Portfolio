@@ -32,6 +32,10 @@ app.use(express.static('public'))
 app.use('/', indexRouter)
 app.use('/admin', adminRouter)
 
+app.get('/zohoverify/verifyforzoho.html', (req, res) => {
+    res.render('verifyforzoho')
+})
+
 app.use(function(req, res) {
     res.status(404).render('404')
 })
